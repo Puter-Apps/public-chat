@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Chat Room</title>
+    <script src="https://js.puter.com/v2/"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="authOverlay" class="auth-overlay">
+        <div class="auth-card">
+            <h2>Join Chat Room</h2>
+            <p>Sign in with your Puter account to participate in the conversation.</p>
+            <button id="authButton" class="auth-button">Sign In</button>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">Professional Chat</div>
+                <div class="connection-status">
+                    <div class="status-dot"></div>
+                    <span id="connectionStatus">Connecting...</span>
+                </div>
+            </div>
+
+            <div class="users-section">
+                <div class="section-header">Online Users (<span id="userCount">0</span>)</div>
+                <div id="userList" class="user-list">
+                    <div class="loading-placeholder">Loading users...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="chat-title">General Discussion</div>
+                <div class="chat-stats">
+                    <span>Messages: <strong id="messageCount">0</strong></span>
+                    <span>Online: <strong id="onlineCount">0</strong></span>
+                </div>
+            </div>
+
+            <div class="messages-container">
+                <div id="messagesArea" class="messages-area">
+                    <!-- Messages will be added here -->
+                </div>
+
+                <div class="input-area">
+                    <div class="input-container">
+                        <textarea 
+                            id="messageInput" 
+                            class="message-input" 
+                            placeholder="Type your message..."
+                            rows="1"
+                            disabled
+                        ></textarea>
+                        <button id="sendButton" class="send-button" disabled>
+                            ➤
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
